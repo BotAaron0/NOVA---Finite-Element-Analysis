@@ -1,0 +1,117 @@
+# GLAZE COLOR MATCHING INPUTS
+# Edit and save in Notepad, then run .\reverseglazesimple\run.cmd from fea gpt.
+# All recommendations use documented fired combinations; no untested colors are invented.
+# Leave unknown values blank; do not guess measurements.
+# Specify either a target HEX color, a reference image, or both.
+
+# TARGET APPEARANCE
+# Example HEX: #4A9FA5 (include the #; it is part of the color).
+target_color_hex =
+target_reference_image_path =
+# Optional plain-language description, e.g. muted turquoise with blue speckles.
+target_description =
+# overall_color, dominant_color, or multicolor_pattern
+color_match_priority = overall_color
+# any, glossy, satin, or matte
+preferred_finish = any
+# any, opaque, translucent, or transparent
+preferred_opacity = any
+# any, smooth, speckled, mottled, crystalline, or other description
+preferred_texture = any
+
+# SOURCE DATA
+combination_zip_path = C:\Users\redpe\Downloads\NOVA Hackathon - Glaze Combos-20261107T205002Z-1-001.zip
+# tested_only recommends documented fired combinations.
+# Untested combinations require separate prediction and physical validation.
+recommendation_mode = tested_only
+number_of_results = 5
+
+# CLAY AND UNDERLYING SURFACE
+clay_brand_and_product =
+# white_stoneware, dark_stoneware, porcelain, earthenware, or description
+clay_body_type =
+clay_fired_color =
+bisque_cone =
+bisque_peak_temperature_c =
+# none or exact brand, code, and color; applied under the glazes.
+engobe_or_slip =
+engobe_or_slip_coats =
+# vertical, horizontal, or mixed; orientation affects glaze flow.
+surface_orientation = vertical
+# smooth, textured, carved, etc.
+surface_texture =
+
+# FIRING CONDITIONS
+# Cone is a heatwork measure; peak temperature alone is not equivalent.
+# IMPORTANT: cone 06 and cone 6 are different. Preserve a leading zero.
+target_cone =
+peak_temperature_c =
+# oxidation, reduction, neutral, or unknown
+firing_atmosphere =
+# electric, gas, wood, etc.
+kiln_type =
+# Optional kiln/controller program name or path to a schedule file.
+firing_program_name =
+firing_schedule_file_path =
+# Optional segments in order: rate C/hour, end temperature C, hold minutes.
+# Example format only: 100,600,0; 150,1200,10
+heating_segments =
+peak_hold_minutes =
+# natural or controlled; provide cooling segments when known.
+cooling_mode =
+# Same segment format as heating. Positive rate magnitude, descending end temps.
+cooling_segments =
+# For reduction firings, describe when reduction starts/stops and its intensity.
+reduction_details =
+# Actual witness-cone observation, if available.
+witness_cone_result =
+
+# GLAZE APPLICATION
+# For matching existing chart results, coat counts and product codes are useful.
+# Thickness is optional if unmeasured. Specify DRY thickness, not fired thickness.
+# Do not infer millimeters from a coat count; brushing and glaze solids vary.
+# brush, dip, spray, pour, or mixed
+application_method =
+# Comma-separated allowed base coat counts, e.g. 2 or 1,2,3.
+allowed_base_coat_counts =
+allowed_top_coat_counts =
+base_dry_thickness_mm =
+top_dry_thickness_mm =
+# Optional measured combined dry thickness; do not add wet and dry measurements.
+total_dry_glaze_thickness_mm =
+# yes, no, or unknown
+dry_between_coats =
+# For dipping, supply times and slurry measurements when known.
+base_dip_seconds =
+top_dip_seconds =
+glaze_slurry_specific_gravity =
+# full_overlap, partial_overlap, or describe placement
+layer_overlap = full_overlap
+# yes lets the matcher consider both orders ONLY where documented separately.
+allow_documented_reverse_layer_order = yes
+
+# AVAILABLE MATERIALS AND CONSTRAINTS
+# available_only or any_in_dataset
+material_selection = any_in_dataset
+# Use brand and exact product codes, separated by commas.
+available_glazes =
+excluded_glazes =
+# Optional restrictions on running, crazing, pinholing, etc.
+unwanted_effects =
+# decorative, functional, or food_contact; appearance does not establish suitability.
+intended_use =
+additional_notes =
+
+# OPTIONAL LOCAL TEST DATA FOR BETTER ACCURACY
+# A folder of your own fired tests with recipes, firing details, and photographs.
+local_test_data_folder =
+# Describe photo lighting; consistent lighting and white balance improve matching.
+photo_lighting =
+color_reference_card =
+
+# MINIMUM TO START
+# 1. Target HEX or image.
+# 2. Firing cone and atmosphere, plus peak temp/schedule when known.
+# 3. Clay body and engobe/slip, if any.
+# 4. Available glazes if recommendations must use your inventory.
+# The matcher should report missing conditions rather than inventing them.

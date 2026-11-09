@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.egg-info/
+outputs/*
+.env
+.env.*
+!.env.example
+*.glb
+*.vtu
+
+# Explicitly retain the requested run-011 results.
+!outputs/run-011/
+!outputs/run-011/*.glb
+!outputs/run-011/*.vtu
+!outputs/run-011/*.json
+!outputs/run-011/*.txt
+
+# Preserve the old upload checkout locally without nesting repositories.
+/github-upload/
+/outputs/
+

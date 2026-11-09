@@ -1,0 +1,23 @@
+# Rebuild as a hollow vase; thickness is an assumption, not inferred from the GLB.
+geometry_mode = vase
+# Fine prepared geometry; voxel_size_m below controls FEA separately.
+prepared_voxel_size_m = 0.0001
+wall_thickness_m = 0.02
+# Edit with Notepad. All lengths below are in meters AFTER model scaling.
+# Illustrative material and loading only; replace with your actual values.
+model_scale = 1.0
+young_modulus_pa = 2000000000
+poisson_ratio = 0.3
+density_kg_m3 = 1200
+gravity_m_s2 = 9.81
+voxel_size_m = 0.01
+up_axis = z
+fixed_base_depth_m = 0.005
+top_load_depth_m = 0.005
+force_x_n = 0
+force_y_n = 0
+force_z_n = 20000
+max_voxels = 30000
+
+# Log color contrast: higher spreads low stresses across more colors.
+log_range_decades = 3
